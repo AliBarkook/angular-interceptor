@@ -16,9 +16,11 @@ export class AppComponent implements OnInit{
   }
 
   ngOnInit() {
+    console.warn('start service call');
+    
     this.userService.getUsersList().subscribe(res => {
-      console.log(res);
       
+      console.warn('service date recieved');
     })
   }
 }
